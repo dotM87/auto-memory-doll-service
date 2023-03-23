@@ -23,7 +23,7 @@ Before running the script, you need to provide the path to your Google Service A
 You can then run the script by running:
 
 ```sh
-auto-memory-doll-service.py
+auto-memory-doll.py
 ```
 
 The script will open a new instance of Chrome and prompt you to scan the QR code to login to WhatsApp Web. Once you have logged in, press enter in the terminal to start sending messages.
