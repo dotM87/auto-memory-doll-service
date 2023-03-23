@@ -25,7 +25,8 @@ result = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID, range
 values = result.get('values', [])
 phone_numbers = ['+591' + value[0] for value in values]
 
-service = Service('/usr/lib/chromium-browser/chromedriver.unstripped')
+#here replace the text with the path to webdriver
+service = Service('/usr/lib/chromium-browser/chromedriver')
 driver = webdriver.Chrome(service=service)
 driver.get('https://web.whatsapp.com/')
 
@@ -39,7 +40,7 @@ for phone_number in phone_numbers:
     message_box = driver.find_element("xpath", '//div[@contenteditable="true"][@data-tab="1"]')
     
     #enter here the message you wish to send
-    message_box.send_keys('https://chat.whatsapp.com/L8FjY2LrQ4E0u3eTfma5ub')
+    message_box.send_keys('your message')
     
     send_button = driver.find_element("xpath", '//span[@data-icon="send"]')
     send_button.click()
